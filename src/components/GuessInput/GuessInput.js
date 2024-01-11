@@ -15,12 +15,13 @@ function GuessInput({ addGuess }) {
     >
       <label htmlFor="guess-input">Enter guess:</label>
       <input
+        required
         id="guess-input"
         type="text"
         pattern="[A-Za-z]{5}"
         value={guess}
         onChange={(event) => {
-          setGuess(event.target.value);
+          setGuess(event.target.value.toUpperCase());
         }}
       />
     </form>
